@@ -1,0 +1,2869 @@
+[ {
+  "base" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml",
+  "title" : {
+    "type" : "text",
+    "" : "DailyTreasuryYieldCurveRateData"
+  },
+  "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve",
+  "updated" : "2024-10-22T18:12:46Z",
+  "link" : {
+    "rel" : "self",
+    "title" : "DailyTreasuryYieldCurveRateData",
+    "href" : "DailyTreasuryYieldCurveRateData"
+  },
+  "entry" : [ {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1753",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1753"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1753"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-02T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.83"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.89"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.81"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.87"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.90"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.87"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.98"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.94"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.00"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1752",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1752"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1752"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-03T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.89"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.94"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.85"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.94"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.96"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.92"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.04"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.99"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.04"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1754",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1754"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1754"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-04T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.84"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.90"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.82"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.92"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.93"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.91"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.02"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.98"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.04"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1756",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1756"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1756"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-05T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.79"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.85"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.79"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.90"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.94"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.92"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.03"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.99"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.06"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1755",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1755"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1755"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-08T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.79"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.88"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.81"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.90"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.95"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.92"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.05"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.02"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.09"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1748",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1748"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1748"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-09T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.80"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.82"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.78"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.91"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.94"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.92"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.05"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.02"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.10"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1747",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1747"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1747"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-10T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.75"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.78"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.77"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.91"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.95"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.92"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.00"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.03"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.11"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1749",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1749"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1749"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-11T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.80"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.80"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.77"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.91"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.95"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.94"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.01"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.04"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.11"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1751",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1751"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1751"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-12T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.74"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.81"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.76"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.93"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.98"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.99"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.07"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.10"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.17"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1750",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1750"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1750"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-16T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.89"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.99"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.92"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.10"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.13"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.11"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.18"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.20"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.25"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1763",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1763"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1763"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-17T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.97"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.97"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.91"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.09"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.11"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.11"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.17"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.19"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.25"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1762",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1762"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1762"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-18T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.04"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.08"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.05"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.25"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.28"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.27"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.31"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.32"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.35"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1764",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1764"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1764"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-19T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.00"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.01"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.00"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.20"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.23"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.20"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.24"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.26"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.29"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1766",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1766"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1766"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-22T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.99"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.99"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.98"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.18"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.20"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.19"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.25"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.27"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.31"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1765",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1765"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1765"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-23T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.93"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.97"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.97"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.18"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.20"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.18"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.23"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.26"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.29"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1758",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1758"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1758"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-24T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.93"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.99"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.00"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.20"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.29"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.28"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.34"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.38"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.41"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1757",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1757"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1757"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-25T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.95"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.01"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.03"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.24"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.32"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.31"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.39"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.42"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.46"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1759",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1759"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1759"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-26T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.93"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.04"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.07"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.28"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.38"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.38"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.45"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.49"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.55"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1761",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1761"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1761"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-29T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.00"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.09"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.08"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.30"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.39"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.39"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.45"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.50"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.54"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1760",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1760"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1760"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-30T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.00"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.14"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.09"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.30"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.39"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.43"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.47"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.51"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.55"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1746",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:46Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1746"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1746"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-01-31T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.00"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.13"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.08"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.28"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.36"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.35"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.39"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.43"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.46"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  } ]
+}, {
+  "base" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml",
+  "title" : {
+    "type" : "text",
+    "" : "DailyTreasuryYieldCurveRateData"
+  },
+  "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve",
+  "updated" : "2024-10-22T18:12:54Z",
+  "link" : {
+    "rel" : "self",
+    "title" : "DailyTreasuryYieldCurveRateData",
+    "href" : "DailyTreasuryYieldCurveRateData"
+  },
+  "entry" : [ {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1732",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1732"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1732"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-01T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.02"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.13"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.09"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.28"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.35"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.35"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.38"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.42"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.44"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1731",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1731"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1731"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-02T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.07"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.17"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.13"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.37"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.43"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.42"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.46"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.50"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.51"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1733",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1733"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1733"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-05T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.08"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.18"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.15"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.37"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.43"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.44"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.48"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.53"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.53"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1735",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1735"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1735"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-06T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.09"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.17"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.15"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.42"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.43"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.49"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.52"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.57"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.58"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1734",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1734"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1734"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-07T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.08"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.19"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.17"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.42"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.43"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.51"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.53"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.52"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.57"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1727",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1727"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1727"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-08T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.08"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.18"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.13"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.37"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.39"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.45"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.48"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.49"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.50"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1726",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1726"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1726"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-09T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.02"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.09"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.03"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.25"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.24"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.29"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.34"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.31"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.36"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1728",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1728"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1728"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-12T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.99"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.11"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.06"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.32"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.32"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.37"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.41"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.40"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.43"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1730",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1730"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1730"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-13T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.84"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.97"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "7.95"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.21"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.21"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.29"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.36"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.35"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.39"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1729",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1729"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1729"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-14T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.87"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.00"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.03"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.27"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.27"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.34"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.36"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.36"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.41"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1742",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1742"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1742"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-15T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.97"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.08"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.11"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.35"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.35"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.40"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.44"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.43"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.47"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1741",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1741"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1741"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-16T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.94"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.07"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.09"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.36"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.34"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.41"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.43"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.42"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.46"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1743",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1743"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1743"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-20T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.06"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.20"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.24"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.52"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.52"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.58"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.63"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.62"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.66"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1745",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1745"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1745"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-21T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.01"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.19"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.22"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.50"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.52"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.60"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.63"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.62"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.66"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1744",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1744"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1744"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-22T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.99"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.15"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.17"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.45"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.48"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.48"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.57"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.54"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.56"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1737",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1737"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1737"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-23T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.93"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.09"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.11"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.43"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.45"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.47"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.56"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.53"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.56"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1736",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1736"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1736"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-26T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.97"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.09"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.10"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.38"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.40"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.40"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.49"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.46"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.49"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1738",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1738"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1738"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-27T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "7.99"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.10"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.06"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.34"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.34"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.34"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.43"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.41"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.45"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  }, {
+    "id" : "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1740",
+    "title" : {
+      "type" : "text"
+    },
+    "updated" : "2024-10-22T18:12:54Z",
+    "author" : {
+      "name" : ""
+    },
+    "link" : {
+      "rel" : "edit",
+      "title" : "DailyTreasuryYieldCurveRateDatum",
+      "href" : "/resource-center/data-chart-center/interest-rates/pages/xml-item?data=daily_treasury_yield_curve&id=1740"
+    },
+    "category" : {
+      "term" : "TreasuryDataWarehouseModel.DailyTreasuryYieldCurveRateDatum",
+      "scheme" : "http://schemas.microsoft.com/ado/2007/08/dataservices/scheme"
+    },
+    "content" : {
+      "type" : "application/xml",
+      "properties" : {
+        "Id" : {
+          "type" : "Edm.Int32",
+          "" : "1740"
+        },
+        "NEW_DATE" : {
+          "type" : "Edm.DateTime",
+          "" : "1990-02-28T00:00:00"
+        },
+        "BC_3MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.04"
+        },
+        "BC_6MONTH" : {
+          "type" : "Edm.Double",
+          "" : "8.14"
+        },
+        "BC_1YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.12"
+        },
+        "BC_2YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.43"
+        },
+        "BC_3YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.45"
+        },
+        "BC_5YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.44"
+        },
+        "BC_7YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.54"
+        },
+        "BC_10YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.51"
+        },
+        "BC_30YEAR" : {
+          "type" : "Edm.Double",
+          "" : "8.54"
+        },
+        "BC_30YEARDISPLAY" : {
+          "type" : "Edm.Double",
+          "" : "0.00"
+        }
+      }
+    }
+  } ]
+} ]
