@@ -45,7 +45,7 @@ const OriginalApp = () => {
 
   if (error) return <div>Error: {error}</div>;
 
-  const { maturities, dates, yields } = data || {}; // Handle null state initially
+  const { maturities, dates, yields } = data || {};
 
   return (
     <div style={appStyles.container}>
