@@ -59,6 +59,7 @@ public class YieldCurveDataService {
         List<String> maturities = (List<String>) yieldCurveData.get("maturities");
         List<List<Float>> yields = (List<List<Float>>) yieldCurveData.get("yields");
 
+        //TODO binary search
         List<LocalDate> filteredDates = filterDates(allDates, startDate, endDate);
 
         List<Integer> filteredIndices = filteredDates.stream()
@@ -70,7 +71,7 @@ public class YieldCurveDataService {
                 .collect(Collectors.toList());
 
         List<LocalDate> groupedDates = groupDates(filteredDates, groupBy);
-        List<List<Float>> groupedYields = averageYields(filteredYields, groupedDates);
+        List<List<Float>> groupedYields = averageYields(filteredYields, groupedDates, filteredDates);
 
         return Map.of(
                 "dates", groupedDates,
@@ -79,11 +80,46 @@ public class YieldCurveDataService {
         );
     }
 
-    private List<List<Float>> averageYields(List<List<Float>> filteredYields, List<LocalDate> groupedDates) {
+    private List<List<Float>> averageYields(List<List<Float>> filteredYields, List<LocalDate> groupedDates, List<LocalDate> filteredDates) {
         List<List<Float>> groupedYields = new ArrayList<>();
+        /*  yields        filteredDates   groupedDates
+            3,4,5,6,7     01              01
+            3,4,5,6,7     02              03
+            ---------
+            4,5,6,7,8     03
+            4,5,6,7,8     04
 
-        int currentRangeCount = 0;
-        int currentRangeSum = 0;
+            Grouped Dates
+            01, 03
+         */
+
+        int currentDateIndex = 0;
+        int currentGroupedDateIndex = 1;
+        LocalDate currentDate = filteredDates.get(currentDateIndex);
+
+        while(currentDateIndex < filteredDates.size() - 1) {
+            float[] currentRangeCount = new float[filteredYields.size()];
+            float[] currentRangeSum = new float[filteredYields.size()];
+
+            LocalDate nextDate = groupedDates.get(currentDateIndex + 1);
+            List<Float> currentYieldForDate = filteredYields.get(currentDateIndex);
+            while(currentDate.isBefore(nextDate)) {
+                for (int i = 0; i < currentRangeSum.length; i++) {
+
+                }
+
+                currentDateIndex++;
+                currentDate = groupedDates.get(currentDateIndex);
+
+            }
+
+            List<Float> currentRangeYields = new ArrayList<>();
+
+            // add avg to currentRangeYields
+            groupedYields.add(currentRangeYields);
+
+        }
+
         return groupedYields;
     }
     private List<LocalDate> groupDates(List<LocalDate> filteredDates, String groupBy) {
