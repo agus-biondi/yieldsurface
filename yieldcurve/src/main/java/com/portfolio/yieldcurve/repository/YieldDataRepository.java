@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class YieldDataRepository {
@@ -21,7 +22,7 @@ public class YieldDataRepository {
     @Value("${spring.datasource.yield-data-table-name}")
     private String tableName;
 
-    public LocalDate getMostRecentUpdateDate() {
+    public Optional<LocalDate> getMostRecentUpdateDate() {
 
         String query = new StringBuilder("SELECT MAX(date) FROM ").append(tableName).toString();
 
@@ -30,17 +31,20 @@ public class YieldDataRepository {
              ResultSet resultSet = preparedStatement.executeQuery()) {
 
             if (resultSet.next()) {
-                return resultSet.getDate(1).toLocalDate();
+                java.sql.Date sqlDate = resultSet.getDate(1);
+                if (sqlDate != null ) {
+                    return Optional.of(sqlDate.toLocalDate());
+                }
             }
         } catch (SQLException e) {
-            System.out.println("SQL Exception : " + e);
+            System.out.println("SQL Exception getting most recent update: " + e);
         }
-        return null;
+        return Optional.empty();
     }
 
     public void saveYieldCurveData(List<Object[]> yieldDataUpdates) {
-        String sql = "INSERT INTO yield_curve (date, maturity, yield) " +
-                "VALUES (?, ?, ?)";
+        String sql = "INSERT INTO " + tableName + " (date, maturity, yield) " +
+                "VALUES (?, CAST(? AS maturity_enum), ?)";
 
         try (Connection connection = dataSource.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {

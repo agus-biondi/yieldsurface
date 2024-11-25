@@ -3,6 +3,7 @@ package com.portfolio.yieldcurve.service;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.portfolio.yieldcurve.repository.YieldDataRepository;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -12,6 +13,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class TreasuryDataUpdaterService {
@@ -43,10 +45,9 @@ public class TreasuryDataUpdaterService {
             Map.entry("BC_20YEAR", "20Y"),
             Map.entry("BC_30YEAR", "30Y")
     );
-
-
+    
     public void updateDataFromTreasury() {
-        LocalDate mostRecentUpdate = yieldDataRepository.getMostRecentUpdateDate();
+        LocalDate mostRecentUpdate = yieldDataRepository.getMostRecentUpdateDate().orElse(DEFAULT_START_DATE);
         List<String> requestUrls = getRequestUrls(mostRecentUpdate);
 
         RestTemplate restTemplate = new RestTemplate();
@@ -55,13 +56,13 @@ public class TreasuryDataUpdaterService {
         List<Object[]> currentBatch = new ArrayList<>();
 
         int currentXMLInProcess = 1;
-        int softBatchSizeLimit = 2000;
+        int softBatchSizeLimit = 3000;
 
         for (String requestUrl : requestUrls) {
             System.out.println(String.format("Processing URL %d/%d. %s", currentXMLInProcess, requestUrls.size(), requestUrl));
             String xmlContent = restTemplate.getForObject(requestUrl, String.class);
 
-            currentBatch.addAll(getNewRowsFromXMLContent(xmlMapper, xmlContent, requestUrl));
+            currentBatch.addAll(getNewRowsFromXMLContent(xmlMapper, xmlContent, requestUrl, mostRecentUpdate));
 
             if (currentBatch.size() > softBatchSizeLimit) {
                 System.out.println("Saving batch of size: " + currentBatch.size());
@@ -77,7 +78,7 @@ public class TreasuryDataUpdaterService {
         }
     }
 
-    private List<Object[]> getNewRowsFromXMLContent(XmlMapper xmlMapper, String xmlContent, String requestUrl) {
+    private List<Object[]> getNewRowsFromXMLContent(XmlMapper xmlMapper, String xmlContent, String requestUrl, LocalDate mostRecentUpdate) {
         List<Object[]> newRows = new ArrayList<>();
         try {
             JsonNode rootNode = xmlMapper.readTree(xmlContent);
@@ -86,8 +87,10 @@ public class TreasuryDataUpdaterService {
             entries.forEach(entry -> {
                 JsonNode properties = entry.path("content").path("properties");
 
-                String dateString = properties.findPath("NEW_DATE").asText();
-                LocalDate date = LocalDate.parse(dateString);
+                String dateString = properties.path("NEW_DATE").path("").asText();
+                LocalDate date = LocalDate.parse(dateString.substring(0,10));
+
+                if (date.isBefore(mostRecentUpdate) || date.isEqual(mostRecentUpdate)) return;
 
                 YIELD_KEYS.forEach(maturity -> {
                     Float yield = getYield(properties, maturity);
@@ -103,15 +106,23 @@ public class TreasuryDataUpdaterService {
         return newRows;
     }
     private Float getYield(JsonNode properties, String fieldName) {
-        JsonNode fieldNode = properties.findPath(fieldName);
-        return fieldNode.isMissingNode() ? null : fieldNode.floatValue();
+        JsonNode fieldNode = properties.path(fieldName).path("");
+        if (fieldNode.isMissingNode() || fieldNode.isNull()) {
+            return null;
+        }
+        try {
+            return (float)fieldNode.asDouble();
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number format for " + fieldNode.toPrettyString());
+            return null;
+        }
     }
 
     private List<String> getRequestUrls(LocalDate mostRecentUpdate) {
 
         List<String> requestUrls = new ArrayList<>();
         LocalDate todaysDate = LocalDate.now();
-        LocalDate currentDate = mostRecentUpdate != null ? mostRecentUpdate : DEFAULT_START_DATE;
+        LocalDate currentDate = mostRecentUpdate;
 
 
         while(currentDate.isBefore(todaysDate)) {
