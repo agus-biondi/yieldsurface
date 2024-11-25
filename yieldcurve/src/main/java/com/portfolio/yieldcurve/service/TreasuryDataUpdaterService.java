@@ -45,7 +45,7 @@ public class TreasuryDataUpdaterService {
             Map.entry("BC_20YEAR", "20Y"),
             Map.entry("BC_30YEAR", "30Y")
     );
-    
+
     public void updateDataFromTreasury() {
         LocalDate mostRecentUpdate = yieldDataRepository.getMostRecentUpdateDate().orElse(DEFAULT_START_DATE);
         List<String> requestUrls = getRequestUrls(mostRecentUpdate);
