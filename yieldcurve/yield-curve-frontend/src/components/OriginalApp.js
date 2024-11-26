@@ -20,7 +20,7 @@ const OriginalApp = () => {
     setError(null);
 
     const endDate = formatDate(currentDate);
-    const startDate = new Date(currentDate - getTimeWindowDuration(timeWindow));
+    const startDate = formatDate(new Date(currentDate - getTimeWindowDuration(timeWindow)));
 
     fetch(
       `http://localhost:8080/api/v1/yield-curve-data?start_date=${startDate}&end_date=${endDate}&group_by=${groupBy}`
