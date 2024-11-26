@@ -50,9 +50,9 @@ public class YieldDataRepository {
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 while (resultSet.next()) {
                     String dateGroup = resultSet.getString("date_group");
-                    Array yieldsArray = resultSet.getArray("yields");
+                    BigDecimal[] yieldsArray = (BigDecimal[]) resultSet.getArray("avg_yield").getArray();
 
-                    List<Float> yields = convertArrayToFloatList(yieldsArray);
+                    List<Float> yields = convertBigDecimalArrayToFloatList(yieldsArray);
                     yieldDataByDate.put(dateGroup, yields);
                 }
             }
@@ -126,39 +126,60 @@ public class YieldDataRepository {
      * @return A List of Float values.
      * @throws SQLException If an error occurs while accessing the array.
      */
-    private List<Float> convertArrayToFloatList(Array array) throws SQLException {
-        BigDecimal[] bigDecimalArray = (BigDecimal[]) array.getArray();
-        List<Float> floatList = new ArrayList<>();
-        for (BigDecimal bd : bigDecimalArray) {
-            floatList.add(bd.floatValue());
-        }
-        return floatList;
+    private List<Float> convertBigDecimalArrayToFloatList(BigDecimal[] array) throws SQLException {
+        return Arrays.stream(array)
+                .map(bd -> bd == null ? null : bd.floatValue())
+                .toList();
     }
 
 
     private String buildGetYieldCurveQuery(String groupBy) {
         return String.format("""
-        SELECT
-            date_group,
-            ARRAY_AGG(ROUND(avg_yield, 2) ORDER BY maturity) AS yields
-        FROM (
-            SELECT
-                DATE_TRUNC('%s', date)::DATE date_group,
-                maturity,
-                AVG(yield) avg_yield
-            FROM 
-                %s
-            WHERE 
-                date BETWEEN ? AND ?
-            GROUP BY
-                DATE_TRUNC('%s', date)::DATE,
-                maturity
-        ) avg_yield_data
-        GROUP BY
-            date_group
-        ORDER BY 
-            date_group;
-    """, groupBy.toUpperCase(), tableName, groupBy.toUpperCase());
+                WITH dates AS (
+                    SELECT DISTINCT date::DATE
+                    FROM %s
+                    WHERE date BETWEEN ? AND ?
+                ),
+                maturities AS (
+                    SELECT unnest(enum_range(NULL::maturity_enum)) AS maturity
+                ),
+                all_combinations AS (
+                    SELECT
+                        d.date,
+                        m.maturity
+                    FROM dates d
+                    CROSS JOIN maturities m
+                )
+                SELECT
+                	date_group,
+                	ARRAY_AGG(COALESCE(yield, NULL) ORDER BY maturity) avg_yield
+                FROM (
+
+                	SELECT
+                		DATE_TRUNC('%s', ac.date)::DATE date_group,
+                		ac.maturity,
+                		ROUND(AVG(y.yield), 2) yield
+                	FROM
+                		all_combinations ac
+                	LEFT JOIN\s
+                		%s y
+                	ON\s
+                		ac.date = y.date AND
+                		ac.maturity = y.maturity
+
+                	GROUP BY
+                		DATE_TRUNC('%s', ac.date),
+                		ac.maturity
+                	ORDER BY\s
+                		1,2
+                ) avg_yield_data
+
+                GROUP BY
+                	date_group
+                ORDER BY \s
+                	date_group ASC
+
+                    """, tableName, groupBy.toUpperCase(), tableName, groupBy.toUpperCase());
     }
 
 
