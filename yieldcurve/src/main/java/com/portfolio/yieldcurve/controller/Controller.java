@@ -77,7 +77,7 @@ public class Controller {
             ));
         }
 
-
+        LOGGER.info("Returning records to user");
         return ResponseEntity.ok(yieldCurveData);
     }
 

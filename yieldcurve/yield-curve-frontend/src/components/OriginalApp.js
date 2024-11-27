@@ -7,13 +7,24 @@ import DatePickers from "./DatePickers";
 import YieldSurfacePlotComponent from "./YieldSurfacePlotComponent";
 
 const OriginalApp = () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const [groupBy, setGroupBy] = useState(urlParams.get("groupBy") || "Week");
+  const [timeWindow, setTimeWindow] = useState(urlParams.get("timeWindow") || "1Y");
+  const [currentDate, setCurrentDate] = useState(
+  	isValidDate(new Date(urlParams.get("endDate"))) ?  new Date(urlParams.get("endDate")) : new Date()
+  );
+
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const [groupBy, setGroupBy] = useState("Week");
-  const [timeWindow, setTimeWindow] = useState("1Y");
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const updateURL = () => {
+    const params = new URLSearchParams();
+    params.set("groupBy", groupBy);
+    params.set("timeWindow", timeWindow);
+    params.set("endDate", formatDate(currentDate));
+    window.history.replaceState({}, "", `?${params.toString()}`);
+  };
 
   const fetchData = () => {
 
@@ -45,6 +56,7 @@ const OriginalApp = () => {
   };
 
   useEffect(() => {
+    updateURL();
     fetchData();
   }, [groupBy, timeWindow, currentDate]);
 
