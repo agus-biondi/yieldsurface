@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { formatDate, getTimeWindowDuration } from "../utils/utils.js";
+import { formatDate, isValidDate, getTimeWindowDuration  } from "../utils/utils.js";
 import { appStyles } from "../styles/styles.js";
 
 import ControlGroup from "./ControlGroup";
@@ -16,6 +16,11 @@ const OriginalApp = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const fetchData = () => {
+
+    if (!isValidDate(currentDate)) {
+    	return;
+    }
+
     setLoading(true);
     setError(null);
 
@@ -43,8 +48,6 @@ const OriginalApp = () => {
     fetchData();
   }, [groupBy, timeWindow, currentDate]);
 
-  if (error) return <div>Error: {error}</div>;
-
   const { maturities, dates, yields } = data || {};
 
   return (
@@ -68,7 +71,14 @@ const OriginalApp = () => {
         <DatePickers
           startDate={new Date(currentDate - getTimeWindowDuration(timeWindow))}
           endDate={currentDate}
-          setEndDate={setCurrentDate}
+          setEndDate={(newEndDate) => {
+			  if (isValidDate(newEndDate)) {
+				setCurrentDate(newEndDate);
+			  } else {
+				console.warn("Invalid end date selected.");
+			  }
+			}}
+			timeWindow={timeWindow}
         />
       </div>
 

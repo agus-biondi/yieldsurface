@@ -11,3 +11,7 @@ export const getTimeWindowDuration = (timeWindow) => {
   };
   return durations[timeWindow] || 0;
 };
+
+export const isValidDate = (date) => {
+    return date instanceof Date && !isNaN(date);
+  };
