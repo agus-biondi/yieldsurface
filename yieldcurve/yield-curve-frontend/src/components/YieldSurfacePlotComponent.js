@@ -2,6 +2,10 @@ import React from "react";
 import Plot from "react-plotly.js";
 
 const YieldSurfacePlotComponent = ({ maturities, dates, yields }) => {
+  if (!maturities || !dates || !yields) {
+    return <div>Loading plot data...</div>;
+  }
+
   return (
     <div style={{ flex: 1, margin: "20px" }}>
       <Plot
@@ -23,7 +27,7 @@ const YieldSurfacePlotComponent = ({ maturities, dates, yields }) => {
         ]}
         layout={{
           scene: {
-            xaxis: { title: "Maturity", showspikes: false, autorange: "reversed" },
+            xaxis: { title: "Maturity", showspikes: false, range: [0, maturities.length - 1], autorange: false, },
             yaxis: { title: "Date", tickformat: "%Y-%m-%d", showspikes: false },
             zaxis: { title: "Yield", showspikes: false },
             camera: {

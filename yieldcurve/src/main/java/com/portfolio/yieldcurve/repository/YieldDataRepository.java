@@ -158,6 +158,8 @@ public class YieldDataRepository {
                 	LEFT JOIN %s y
                 		ON y.date BETWEEN r.start_date AND r.end_date
                 		AND y.maturity = r.maturity
+                	WHERE
+                	    y.date BETWEEN r.start_date AND r.end_date
                 	GROUP BY
                 		r.maturity,\s
                 		r.start_date,\s
