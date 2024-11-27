@@ -23,7 +23,7 @@ const YieldSurfacePlotComponent = ({ maturities, dates, yields }) => {
         ]}
         layout={{
           scene: {
-            xaxis: { title: "Maturity", showspikes: false },
+            xaxis: { title: "Maturity", showspikes: false, autorange: "reversed" },
             yaxis: { title: "Date", tickformat: "%Y-%m-%d", showspikes: false },
             zaxis: { title: "Yield", showspikes: false },
             camera: {

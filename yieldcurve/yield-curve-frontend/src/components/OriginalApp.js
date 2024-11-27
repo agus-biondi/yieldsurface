@@ -8,7 +8,7 @@ import YieldSurfacePlotComponent from "./YieldSurfacePlotComponent";
 
 const OriginalApp = () => {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false); // Track loading state
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const [groupBy, setGroupBy] = useState("Week");
@@ -61,7 +61,7 @@ const OriginalApp = () => {
         />
         <ControlGroup
           label="Time Window"
-          options={["1W", "1M", "3M", "1Y", "3Y", "5Y"]}
+          options={["1W", "1M", "3M", "1Y", "3Y", "5Y", "10Y"]}
           selected={timeWindow}
           onSelect={setTimeWindow}
         />

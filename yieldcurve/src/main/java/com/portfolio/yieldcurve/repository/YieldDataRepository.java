@@ -49,7 +49,7 @@ public class YieldDataRepository {
 
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 while (resultSet.next()) {
-                    String dateGroup = resultSet.getString("date_group");
+                    String dateGroup = resultSet.getString("start_date");
                     BigDecimal[] yieldsArray = (BigDecimal[]) resultSet.getArray("avg_yield").getArray();
 
                     List<Float> yields = convertBigDecimalArrayToFloatList(yieldsArray);
@@ -135,51 +135,48 @@ public class YieldDataRepository {
 
     private String buildGetYieldCurveQuery(String groupBy) {
         return String.format("""
-                WITH dates AS (
-                    SELECT DISTINCT date::DATE
-                    FROM %s
-                    WHERE date BETWEEN ? AND ?
-                ),
-                maturities AS (
-                    SELECT unnest(enum_range(NULL::maturity_enum)) AS maturity
-                ),
-                all_combinations AS (
-                    SELECT
-                        d.date,
-                        m.maturity
-                    FROM dates d
-                    CROSS JOIN maturities m
-                )
-                SELECT
-                	date_group,
-                	ARRAY_AGG(COALESCE(yield, NULL) ORDER BY maturity) avg_yield
-                FROM (
-
+                
+                WITH start_dates AS (
+                	SELECT generate_series(?, ?, '1 %s'::INTERVAL) AS start_date
+                ), range_boundaries AS (
                 	SELECT
-                		DATE_TRUNC('%s', ac.date)::DATE date_group,
-                		ac.maturity,
-                		ROUND(AVG(y.yield), 2) yield
+                		start_date::DATE,
+                		(start_date + INTERVAL '1 %s' - INTERVAL '1 day')::DATE AS end_date,
+                		m.maturity
                 	FROM
-                		all_combinations ac
-                	LEFT JOIN\s
-                		%s y
-                	ON\s
-                		ac.date = y.date AND
-                		ac.maturity = y.maturity
-
+                		start_dates	s
+                	CROSS JOIN\s
+                		(SELECT unnest(enum_range(NULL::maturity_enum)) AS maturity) m
+                ), yield_data_by_range AS (
+                	SELECT\s
+                		r.start_date,\s
+                		r.end_date,\s
+                		r.maturity,\s
+                		ROUND(AVG(yield), 2) avg_yield
+                	FROM\s
+                		range_boundaries r
+                	LEFT JOIN %s y
+                		ON y.date BETWEEN r.start_date AND r.end_date
+                		AND y.maturity = r.maturity
                 	GROUP BY
-                		DATE_TRUNC('%s', ac.date),
-                		ac.maturity
-                	ORDER BY\s
-                		1,2
-                ) avg_yield_data
-
+                		r.maturity,\s
+                		r.start_date,\s
+                		r.end_date
+                	ORDER BY
+                		r.start_date,\s
+                		r.maturity
+                )
+                                
+                SELECT\s
+                	start_date,
+                	ARRAY_AGG(COALESCE(avg_yield, NULL) ORDER BY maturity) AS avg_yield
+                FROM\s
+                	yield_data_by_range
                 GROUP BY
-                	date_group
-                ORDER BY \s
-                	date_group ASC
-
-                    """, tableName, groupBy.toUpperCase(), tableName, groupBy.toUpperCase());
+                	start_date
+                ORDER BY\s
+                	start_date
+                    """, groupBy.toLowerCase(), groupBy.toLowerCase(), tableName);
     }
 
 
