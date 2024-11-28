@@ -34,7 +34,7 @@ public class YieldDataRepository {
      */
     public Map<String, List<Float>> getYieldCurveData(String startDate, String endDate, String groupBy) {
 
-        String query = groupBy.equals("1D") ? buildGetYieldCurveQueryByDay() : buildGetYieldCurveQueryGroupedBy(groupBy);
+        String query = groupBy.equals("Day") ? buildGetYieldCurveQueryByDay() : buildGetYieldCurveQueryGroupedBy(groupBy);
 
         Map<String, List<Float>> yieldDataByDate = new LinkedHashMap<>();
 
