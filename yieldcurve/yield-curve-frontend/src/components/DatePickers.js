@@ -2,36 +2,37 @@ import React, { useState } from "react";
 import { formatDate, isValidDate, getTimeWindowDuration } from "../utils/utils";
 import { appStyles } from "../styles/styles";
 
-const DatePickers = ({ startDate, endDate, setEndDate, timeWindow }) => {
-  const minDate = new Date("1990-01-01");
-  const maxDate = new Date();
 
-  const minDateF = formatDate(minDate);
-  const maxDateF = formatDate(maxDate);
+const MIN_DATE = new Date("1990-01-01");
+const MAX_DATE = new Date();
 
-  const handleEndDateBlur = (e) => {
+const DatePickers = ({ startDate, endDate, onEndDateChange, timeWindow }) => {
+
+
+  const handleEndDateChange = (e) => {
   	const newEndDate = new Date(e.target.value);
-  	if (isValidDate(newEndDate) && newEndDate >= minDate && newEndDate <= maxDate) {
-      const newStartDate = new Date(newEndDate - getTimeWindowDuration(timeWindow));
 
-      if (isValidDate(newStartDate) && newStartDate >= minDate) {
-        setEndDate(newEndDate);
-      } else {
-        console.warn("Invalid start date calculated from the end date.");
-      }
-    } else {
-      console.warn("Selected end date is outside the valid range.");
-    }
-  }
+  	if (newEndDate > MAX_DATE) {
+  		onEndDateChange(MAX_DATE);
+  		return;
+  	}
+
+  	let calculatedStartDate = new Date(newEndDate - getTimeWindowDuration(timeWindow));
+
+	calculatedStartDate = calculatedStartDate < MIN_DATE ? MIN_DATE : calculatedStartDate;
+
+	onEndDateChange(newEndDate);
+  };
+
   return (
     <div style={appStyles.datePickerContainer}>
       <div>
         <label style={appStyles.datePickerLabel}>Start Date</label>
         <input
           type="date"
-          defaultValue={formatDate(startDate)}
-          readOnly
+          value={formatDate(startDate)}
           title="Start date is calculated based on the End Date and Time Window."
+		  readOnly
           style={{
             ...appStyles.datePickerInput,
             backgroundColor: "#D3D3D3",
@@ -44,9 +45,9 @@ const DatePickers = ({ startDate, endDate, setEndDate, timeWindow }) => {
         <input
           type="date"
           defaultValue={formatDate(endDate)}
-		  min={minDateF}
-          max={maxDateF}
-          onBlur={handleEndDateBlur}
+		  min={formatDate(MIN_DATE)}
+          max={formatDate(MAX_DATE)}
+          onBlur={handleEndDateChange}
           style={appStyles.datePickerInput}
         />
       </div>

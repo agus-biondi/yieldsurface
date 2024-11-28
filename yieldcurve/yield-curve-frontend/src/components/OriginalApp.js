@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { formatDate, isValidDate, getTimeWindowDuration  } from "../utils/utils.js";
 import { appStyles } from "../styles/styles.js";
 
@@ -8,59 +8,67 @@ import YieldSurfacePlotComponent from "./YieldSurfacePlotComponent";
 
 const OriginalApp = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const [groupBy, setGroupBy] = useState(urlParams.get("groupBy") || "Week");
-  const [timeWindow, setTimeWindow] = useState(urlParams.get("timeWindow") || "1Y");
-  const [currentDate, setCurrentDate] = useState(
-  	isValidDate(new Date(urlParams.get("endDate"))) ?  new Date(urlParams.get("endDate")) : new Date()
-  );
 
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [state, setState] = useState({
+  	groupBy: urlParams.get("groupBy") || "Week",
+  	timeWindow: urlParams.get("timeWindow") || "1Y",
+  	currentDate: (() => {
+  		const urlEndDate = urlParams.get('endDate');
+  		return urlEndDate && !isNaN(new Date(urlEndDate))
+  			? new Date(urlEndDate)
+  			: new Date();
+  	})(),
+  	data: null,
+  	loading: false,
+  	error: null
+  });
+
+  const { groupBy, timeWindow, currentDate, data, loading, error } = state;
+
+  const startDate = useMemo(() => {
+  	const calculatedStartDate = new Date(currentDate - getTimeWindowDuration(timeWindow));
+	return calculatedStartDate < new Date('1990-01-01')
+	  ? new Date('1990-01-01')
+	  : calculatedStartDate;
+  }, [currentDate, timeWindow]);
 
   const updateURL = () => {
-    const params = new URLSearchParams();
-    params.set("groupBy", groupBy);
-    params.set("timeWindow", timeWindow);
-    params.set("endDate", formatDate(currentDate));
+    const params = new URLSearchParams({
+      groupBy,
+      timeWindow,
+      endDate: formatDate(currentDate)
+    });
     window.history.replaceState({}, "", `?${params.toString()}`);
   };
 
-  const fetchData = () => {
+  const fetchData = async () => {
 
-    if (!isValidDate(currentDate)) {
-    	return;
+    if (!currentDate) return;
+
+    setState(prev => ({ ...prev, loading: true, error: null }));
+
+    try {
+    	const response = await fetch(
+		  `http://localhost:8080/api/v1/yield-curve-data?start_date=${formatDate(startDate)}&end_date=${formatDate(currentDate)}&group_by=${groupBy}`
+	    );
+
+	    if (!response.ok) throw new Error('Failed to fetch data');
+
+	    const responseData = await response.json();
+		setState(prev => ({ ...prev, data: responseData, loading: false }));
+	  } catch (err) {
+	    setState(prev => ({ ...prev, error: err.message, loading: false }));
+	  }
     }
 
-    setLoading(true);
-    setError(null);
+    useEffect(() => {
+	  updateURL();
+	  fetchData();
+    }, [groupBy, timeWindow, currentDate]);
 
-    const endDate = formatDate(currentDate);
-    const startDate = formatDate(new Date(currentDate - getTimeWindowDuration(timeWindow)));
-
-    fetch(
-      `http://localhost:8080/api/v1/yield-curve-data?start_date=${startDate}&end_date=${endDate}&group_by=${groupBy}`
-    )
-      .then((response) => {
-        if (!response.ok) throw new Error("Failed to fetch data");
-        return response.json();
-      })
-      .then((responseData) => {
-        setData(responseData);
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setLoading(false);
-      });
-  };
-
-  useEffect(() => {
-    updateURL();
-    fetchData();
-  }, [groupBy, timeWindow, currentDate]);
-
-  const { maturities, dates, yields } = data || {};
+    const handleStateUpdate = (updates) => {
+    	setState(prev => ({...prev, ...updates}));
+    }
 
   return (
     <div style={appStyles.container}>
@@ -72,25 +80,19 @@ const OriginalApp = () => {
           label="Group By"
           options={["Day", "Week", "Month", "Year"]}
           selected={groupBy}
-          onSelect={setGroupBy}
+          onSelect={(value) => handleStateUpdate({ groupBy: value })}
         />
         <ControlGroup
           label="Time Window"
           options={["1W", "1M", "3M", "1Y", "3Y", "5Y", "10Y"]}
           selected={timeWindow}
-          onSelect={setTimeWindow}
+          onSelect={(value) => handleStateUpdate({ timeWindow: value })}
         />
         <DatePickers
-          startDate={new Date(currentDate - getTimeWindowDuration(timeWindow))}
+          startDate={startDate}
           endDate={currentDate}
-          setEndDate={(newEndDate) => {
-			  if (isValidDate(newEndDate)) {
-				setCurrentDate(newEndDate);
-			  } else {
-				console.warn("Invalid end date selected.");
-			  }
-			}}
-			timeWindow={timeWindow}
+          timeWindow={timeWindow}
+          onEndDateChange={(newEndDate) => handleStateUpdate({ currentDate: newEndDate })}
         />
       </div>
 
@@ -102,9 +104,9 @@ const OriginalApp = () => {
           </div>
         ) : (
           <YieldSurfacePlotComponent
-            maturities={maturities}
-            dates={dates}
-            yields={yields}
+            maturities={data?.maturities}
+            dates={data?.dates}
+            yields={data?.yields}
           />
         )}
       </div>
