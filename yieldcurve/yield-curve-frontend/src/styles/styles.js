@@ -27,7 +27,7 @@ export const appStyles = {
     backgroundColor: "#FFF",
     boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
     borderRadius: "8px",
-    marginBottom: "20px",
+    marginBottom: "10px",
   },
   datePickerContainer: {
     display: "flex",
@@ -51,7 +51,7 @@ export const appStyles = {
     flex: 1,
     display: "flex",
     flexDirection: "column",
-    margin: "20px",
+    margin: "10px",
     height: "calc(100vh - 160px)",
     minHeight: "400px",
   },

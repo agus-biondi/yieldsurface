@@ -7,7 +7,7 @@ const YieldSurfacePlotComponent = ({ maturities, dates, yields }) => {
   }
 
   return (
-    <div style={{ flex: 1, margin: "20px" }}>
+    <div style={{ flex: 1, margin: "10px"}}>
       <Plot
         data={[
           {
