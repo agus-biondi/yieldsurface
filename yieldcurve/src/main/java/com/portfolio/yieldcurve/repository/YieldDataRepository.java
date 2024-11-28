@@ -135,49 +135,60 @@ public class YieldDataRepository {
 
     private String buildGetYieldCurveQuery(String groupBy) {
         return String.format("""
-                
-                WITH start_dates AS (
-                	SELECT generate_series(?, ?, '1 %s'::INTERVAL) AS start_date
-                ), range_boundaries AS (
-                	SELECT
-                		start_date::DATE,
-                		(start_date + INTERVAL '1 %s' - INTERVAL '1 day')::DATE AS end_date,
-                		m.maturity
-                	FROM
-                		start_dates	s
-                	CROSS JOIN\s
-                		(SELECT unnest(enum_range(NULL::maturity_enum)) AS maturity) m
-                ), yield_data_by_range AS (
-                	SELECT\s
-                		r.start_date,\s
-                		r.end_date,\s
-                		r.maturity,\s
-                		ROUND(AVG(yield), 2) avg_yield
-                	FROM\s
-                		range_boundaries r
-                	LEFT JOIN %s y
-                		ON y.date BETWEEN r.start_date AND r.end_date
-                		AND y.maturity = r.maturity
-                	WHERE
-                	    y.date BETWEEN r.start_date AND r.end_date
-                	GROUP BY
-                		r.maturity,\s
-                		r.start_date,\s
-                		r.end_date
-                	ORDER BY
-                		r.start_date,\s
-                		r.maturity
-                )
-                                
+           
+            WITH date_boundary AS (
                 SELECT\s
-                	start_date,
-                	ARRAY_AGG(COALESCE(avg_yield, NULL) ORDER BY maturity) AS avg_yield
+                    start_date::DATE,
+                    (start_date + INTERVAL '1 %s' - INTERVAL '1 day')::DATE AS end_date
                 FROM\s
-                	yield_data_by_range
+                    generate_series( ?, ?, '1 %s'::INTERVAL) AS start_date
+              ), yield_data_by_range AS (
+                SELECT\s
+                    r.start_date,\s
+                    r.end_date,\s
+                    y.maturity,\s
+                    AVG(y.yield) avg_yield
+                FROM\s
+                    date_boundary r
+                LEFT JOIN %s y
+                    ON y.date BETWEEN r.start_date AND r.end_date
                 GROUP BY
-                	start_date
-                ORDER BY\s
-                	start_date
+                    y.maturity,\s
+                    r.start_date,\s
+                    r.end_date
+              ), yield_data_with_gaps AS (
+                SELECT\s
+                    start_date,
+                    maturity,
+                    COALESCE(avg_yield, NULL) avg_yield,
+                    LAG(avg_yield) OVER (PARTITION BY start_date ORDER BY maturity) AS prev_yield,
+                    LEAD(avg_yield) OVER (PARTITION BY start_date ORDER BY maturity) AS next_yield\s
+                FROM\s
+                    yield_data_by_range r
+              ), interpolated_yield_data AS (
+                SELECT
+                    start_date,
+                    maturity,
+                CASE
+                    WHEN avg_yield IS NOT NULL
+                        THEN avg_yield
+                    WHEN prev_yield IS NULL OR next_yield IS NULL
+                        THEN NULL
+                    ELSE (prev_yield + next_yield) / 2
+                END AS avg_yield
+                FROM
+                    yield_data_with_gaps		
+              )
+              
+              SELECT\s
+                start_date,
+                ARRAY_AGG(COALESCE(ROUND(avg_yield::NUMERIC, 2), NULL) ORDER BY maturity) AS avg_yield
+              FROM\s
+                interpolated_yield_data
+              GROUP BY
+                start_date
+              ORDER BY\s
+                start_date           
                     """, groupBy.toLowerCase(), groupBy.toLowerCase(), tableName);
     }
 
