@@ -38,11 +38,13 @@ public class YieldDataRepository {
 
         Map<String, List<Float>> yieldDataByDate = new LinkedHashMap<>();
 
+        LOGGER.info("startDate: {} endDate: {}", startDate, endDate);
+        LOGGER.info("startDateSQL: {} endDateSQL: {}", java.sql.Date.valueOf(startDate), java.sql.Date.valueOf(endDate));
         try (Connection connection = dataSource.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-            preparedStatement.setDate(1, Date.valueOf(startDate));
-            preparedStatement.setDate(2, Date.valueOf(endDate));
+            preparedStatement.setDate(1, java.sql.Date.valueOf(startDate));
+            preparedStatement.setDate(2, java.sql.Date.valueOf(endDate));
 
             LOGGER.info("Executing query: {}", preparedStatement);
 
@@ -143,7 +145,7 @@ public class YieldDataRepository {
        FROM\s
            %s r
     WHERE
-        date IS BETWEEN ? AND ?
+        date BETWEEN ? AND ?
      ), interpolated_yield_data AS (
        SELECT
            date,
@@ -160,7 +162,7 @@ public class YieldDataRepository {
      )
      SELECT * FROM (
          SELECT\s
-           date,
+           date start_date,
            ARRAY_AGG(COALESCE(ROUND(avg_yield::NUMERIC, 2), NULL) ORDER BY maturity) AS avg_yield
          FROM\s
            interpolated_yield_data
