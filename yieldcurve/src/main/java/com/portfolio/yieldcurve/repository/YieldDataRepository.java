@@ -133,7 +133,7 @@ public class YieldDataRepository {
 
     private String buildGetYieldCurveQueryByDay() {
         return String.format("""
-   WITH yield_data_with_gaps AS (
+    WITH yield_data_with_gaps AS (
        SELECT\s
            date,
            maturity,
@@ -158,16 +158,17 @@ public class YieldDataRepository {
        FROM
            yield_data_with_gaps
      )
-    
-     SELECT\s
-       date,
-       ARRAY_AGG(COALESCE(ROUND(avg_yield::NUMERIC, 2), NULL) ORDER BY maturity) AS avg_yield
-     FROM\s
-       interpolated_yield_data
-     GROUP BY
-       date
-     ORDER BY\s
-       date""", tableName);
+     SELECT * FROM (
+         SELECT\s
+           date,
+           ARRAY_AGG(COALESCE(ROUND(avg_yield::NUMERIC, 2), NULL) ORDER BY maturity) AS avg_yield
+         FROM\s
+           interpolated_yield_data
+         GROUP BY
+           date
+         ORDER BY\s
+           date
+     ) WHERE array_length(avg_yield, 1) != 1""", tableName);
     }
 
     private String buildGetYieldCurveQueryGroupedBy(String groupBy) {

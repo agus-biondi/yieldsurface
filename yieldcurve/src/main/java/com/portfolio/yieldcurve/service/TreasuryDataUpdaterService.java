@@ -68,9 +68,7 @@ public class TreasuryDataUpdaterService {
                 yieldDataRepository.saveYieldCurveData(currentBatch);
                 currentBatch.clear();
             }
-
             currentXMLInProcess++;
-
         }
         if (!currentBatch.isEmpty()) {
             yieldDataRepository.saveYieldCurveData(currentBatch);
@@ -93,9 +91,7 @@ public class TreasuryDataUpdaterService {
 
                 YIELD_KEYS.forEach(maturity -> {
                     Float yield = getYield(properties, maturity);
-                    if (yield != null) {
-                        newRows.add(new Object[]{date, XML_YIELD_KEYS_TO_HUMAN_READABLE_NAMES.get(maturity), yield});
-                    }
+                    newRows.add(new Object[]{date, XML_YIELD_KEYS_TO_HUMAN_READABLE_NAMES.get(maturity), yield});
                 });
             });
         } catch (IOException e) {
