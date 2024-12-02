@@ -6,7 +6,9 @@ import ControlGroup from "./ControlGroup";
 import DatePickers from "./DatePickers";
 import YieldSurfacePlotComponent from "./YieldSurfacePlotComponent";
 
+
 const OriginalApp = () => {
+
   const urlParams = new URLSearchParams(window.location.search);
 
   const [state, setState] = useState({
@@ -46,10 +48,13 @@ const OriginalApp = () => {
     if (!currentDate) return;
 
     setState(prev => ({ ...prev, loading: true, error: null }));
+	let API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
+	if (API_BASE_URL == undefined) API_BASE_URL = "http://localhost:8080";
     try {
     	const response = await fetch(
-		  `http://localhost:8080/api/v1/yield-curve-data?start_date=${formatDate(startDate)}&end_date=${formatDate(currentDate)}&group_by=${groupBy}`
+		  //`http://localhost:8080/api/v1/yield-curve-data?start_date=${formatDate(startDate)}&end_date=${formatDate(currentDate)}&group_by=${groupBy}`
+	      `${API_BASE_URL}/api/v1/yield-curve-data?start_date=${formatDate(startDate)}&end_date=${formatDate(currentDate)}&group_by=${groupBy}`
 	    );
 
 	    if (!response.ok) throw new Error('Failed to fetch data');
