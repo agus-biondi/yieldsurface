@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { formatDate, isValidDate, getTimeWindowDuration } from "../utils/utils";
+import React from "react";
+import { formatDate } from "../utils/utils";
 import { appStyles } from "../styles/styles";
 
 
@@ -16,10 +16,6 @@ const DatePickers = ({ startDate, endDate, onEndDateChange, timeWindow }) => {
   		onEndDateChange(MAX_DATE);
   		return;
   	}
-
-  	let calculatedStartDate = new Date(newEndDate - getTimeWindowDuration(timeWindow));
-
-	calculatedStartDate = calculatedStartDate < MIN_DATE ? MIN_DATE : calculatedStartDate;
 
 	onEndDateChange(newEndDate);
   };

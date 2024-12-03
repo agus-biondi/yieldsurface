@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { formatDate, isValidDate, getTimeWindowDuration  } from "../utils/utils.js";
+import { formatDate, getTimeWindowDuration  } from "../utils/utils.js";
 import { appStyles } from "../styles/styles.js";
 
 import ControlGroup from "./ControlGroup";
@@ -25,7 +25,7 @@ const OriginalApp = () => {
   	error: null
   });
 
-  const { groupBy, timeWindow, currentDate, data, loading, error } = state;
+  const { groupBy, timeWindow, currentDate, data, loading } = state;
 
   const startDate = useMemo(() => {
   	const calculatedStartDate = new Date(currentDate - getTimeWindowDuration(timeWindow));
@@ -50,7 +50,7 @@ const OriginalApp = () => {
     setState(prev => ({ ...prev, loading: true, error: null }));
 	let API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
-	if (API_BASE_URL == undefined) API_BASE_URL = "http://localhost:8080";
+	if (API_BASE_URL === undefined) API_BASE_URL = "http://localhost:8080";
     try {
     	const response = await fetch(
 		  //`http://localhost:8080/api/v1/yield-curve-data?start_date=${formatDate(startDate)}&end_date=${formatDate(currentDate)}&group_by=${groupBy}`
