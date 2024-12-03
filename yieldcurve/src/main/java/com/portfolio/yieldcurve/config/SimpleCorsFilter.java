@@ -18,7 +18,6 @@ import java.io.IOException;
 @Component
 public class SimpleCorsFilter implements Filter {
 
-    // Create a logger for this class
     private static final Logger logger = LoggerFactory.getLogger(SimpleCorsFilter.class);
 
     @Override
@@ -28,10 +27,8 @@ public class SimpleCorsFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
 
-        // Log the request details
         logger.info("Incoming request: {} {}", req.getMethod(), req.getRequestURI());
 
-        // Set CORS headers
         res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
         res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
         res.setHeader("Access-Control-Allow-Headers", "authorization, content-type, xsrf-token");

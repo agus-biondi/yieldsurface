@@ -53,13 +53,13 @@ public class Controller {
 
         if (!validateDateSelection(startDate)) {
             return ResponseEntity.badRequest().body(Map.of(
-                    "error", "Invalid 'startDate' parameter",
+                    "error", "Invalid 'start_date' parameter",
                     "valid_options", "YYYY-MM-DD formatted date"
             ));
         }
         if (!validateDateSelection(endDate)) {
             return ResponseEntity.badRequest().body(Map.of(
-                    "error", "Invalid 'endDate' parameter",
+                    "error", "Invalid 'end_date' parameter",
                     "valid_options", "YYYY-MM-DD formatted date"
             ));
         }
