@@ -23,12 +23,10 @@ public class Controller {
     @Autowired
     private YieldCurveDataService yieldCurveDataService;
 
-    @RequestMapping(value = "/{[path:[^\\.]*}")
+    @RequestMapping(value = "/{path:[^\\.]*}")
     public String redirect() {
-        return "forward:/";
+        return "forward:/index.html";
     }
-
-
 
     /**
      * Endpoint to retrieve yield curve data.
