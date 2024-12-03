@@ -66,14 +66,6 @@ public class Controller {
 
         Map<String, Object> yieldCurveData = yieldCurveDataService.getYieldCurveData(startDate, endDate, groupBy);
 
-        List<String> validGroupByOptions = List.of("day", "week", "month", "year");
-        if (!validGroupByOptions.contains(groupBy.toLowerCase())) {
-            return ResponseEntity.badRequest().body(Map.of(
-                    "error", "Invalid 'group_by' parameter",
-                    "valid_options", validGroupByOptions
-            ));
-        }
-
         LOGGER.info("Returning records to user");
         return ResponseEntity.ok(yieldCurveData);
     }
