@@ -8,6 +8,7 @@ export const getTimeWindowDuration = (timeWindow) => {
     "1Y": 365 * 24 * 60 * 60 * 1000,
     "3Y": 3 * 365 * 24 * 60 * 60 * 1000,
     "5Y": 5 * 365 * 24 * 60 * 60 * 1000,
+    "10Y": 10 * 365 * 24 * 60 * 60 * 1000
   };
   return durations[timeWindow] || 0;
 };

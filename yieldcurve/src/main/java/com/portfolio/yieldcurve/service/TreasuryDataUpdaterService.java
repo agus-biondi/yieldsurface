@@ -119,8 +119,8 @@ public class TreasuryDataUpdaterService {
         LocalDate todaysDate = LocalDate.now();
         LocalDate currentDate = mostRecentUpdate;
 
-
-        while(currentDate.isBefore(todaysDate)) {
+        while(currentDate.getYear() < todaysDate.getYear() ||
+                (currentDate.getYear() == todaysDate.getYear() && currentDate.getMonthValue() <= todaysDate.getMonthValue())) {
             requestUrls.add(buildRequestUrl(currentDate));
             currentDate = currentDate.plusMonths(1);
         }
